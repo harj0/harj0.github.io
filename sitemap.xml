@@ -2,17 +2,33 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   
+  <url>
+    <loc>http://harj0.github.io/blog/2014-09-21-hello-werldz.html</loc>
+    
+    <lastmod>2014-09-21T01:34:09-05:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://harj0.github.io/blog/2014-09-21-hello-werld.html</loc>
+    
+    <lastmod>2014-09-21T00:00:00-05:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
   
   <url>
     <loc>http://harj0.github.io/blog/archives/</loc>
-    <lastmod>2014-09-21T01:12:44-05:00</lastmod>
+    <lastmod>2014-09-21T04:16:56-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://harj0.github.io/</loc>
-    <lastmod>2014-09-21T01:12:44-05:00</lastmod>
+    <lastmod>2014-09-21T04:16:56-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
