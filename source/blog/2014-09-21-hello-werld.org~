@@ -1,0 +1,265 @@
+#+TITLE: 2014-09-21-Hello-Werld.org
+#+DATE: 2014-09-21
+#+SETUPFILE: ~/Org/Octo-setup.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES: 
+#+JEKYLL_PUBLISHED: true
+
+* Octopress <2014-09-20 Sat>
+Trying out Octopress locally.. 
+Steps taken: (following http://octopress.org/docs/setup/ )
+
+** Setup Octopress (commands entered)
+Cloned to ~/git-installs/octopress/octopress/ . This looks bad but its just for testing, chill.
+- =gem install bundler=
+- =cd ~=
+- =git clone git://github.com/sstephenson/rbenv.git .rbenv=
+- =echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshenv=
+- =echo 'eval "$(rbenv init -)"' >> ~/.zshenv=
+- =git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build=
+- =source ~/.zshenv=
+- =rbenv install 1.9.3-p0=
+- =rbenv local 1.9.3-p0=		
+- =rbenv rehash=		
+- =cd ~/git-installs/octopress/octopress=
+- =bundle install=
+- =rake install=
+
+
+{{{more}}}
+
+** Next Steps
+Chose to use Github Pages for testing.
+Following http://octopress.org/docs/deploying/github/ :
+
+- Created new repository (on Github) harj0.github.io
+- =rake setup_github_pages=
+- ~rake generate~
+/ERROR-/
+#+BEGIN_SRC sh 
+ Error: No JS runtime.
+#+END_SRC
+  + =sudo apt-get install nodejs=
+_Fixed._
+- =rake generate=
+#+BEGIN_SRC sh
+## Generating Site with Jekyll
+identical source/stylesheets/screen.css 
+Configuration file: /home/trey/git-installs/octopress/octopress/_config.yml
+            Source: source
+       Destination: public
+      Generating... 
+                    done.
+ Auto-regeneration: disabled. Use --watch to enable.~
+#+END_SRC
+- =rake deploy=
+/Semi-ERROR-/
+#+BEGIN_SRC sh
+
+## Deploying branch to Github Pages 
+## Pulling any updates from Github Pages 
+cd _deploy
+Warning: Permanently added the RSA host key for IP address '192.30.252.128' to the list of known hosts.
+Enter passphrase for key '/home/trey/.ssh/id_rsa': 
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From github.com:harj0/harj0.github.io
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+cd -
+rm -rf _deploy/index.html
+
+## Copying public to _deploy
+cp -r public/. _deploy
+cd _deploy
+
+## Committing: Site updated at 2014-09-21 02:45:27 UTC
+[master 1cf6a4c] Site updated at 2014-09-21 02:45:27 UTC
+ 61 files changed, 1121 insertions(+), 1 deletion(-)
+ create mode 100644 assets/jwplayer/glow/controlbar/background.png
+ create mode 100644 assets/jwplayer/glow/controlbar/blankButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/divider.png
+ create mode 100644 assets/jwplayer/glow/controlbar/fullscreenButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/fullscreenButtonOver.png
+ create mode 100644 assets/jwplayer/glow/controlbar/muteButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/muteButtonOver.png
+ create mode 100644 assets/jwplayer/glow/controlbar/normalscreenButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/normalscreenButtonOver.png
+ create mode 100644 assets/jwplayer/glow/controlbar/pauseButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/pauseButtonOver.png
+ create mode 100644 assets/jwplayer/glow/controlbar/playButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/playButtonOver.png
+ create mode 100644 assets/jwplayer/glow/controlbar/timeSliderBuffer.png
+ create mode 100644 assets/jwplayer/glow/controlbar/timeSliderCapLeft.png
+ create mode 100644 assets/jwplayer/glow/controlbar/timeSliderCapRight.png
+ create mode 100644 assets/jwplayer/glow/controlbar/timeSliderProgress.png
+ create mode 100644 assets/jwplayer/glow/controlbar/timeSliderRail.png
+ create mode 100644 assets/jwplayer/glow/controlbar/unmuteButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/unmuteButtonOver.png
+ create mode 100644 assets/jwplayer/glow/display/background.png
+ create mode 100644 assets/jwplayer/glow/display/bufferIcon.png
+ create mode 100644 assets/jwplayer/glow/display/muteIcon.png
+ create mode 100644 assets/jwplayer/glow/display/playIcon.png
+ create mode 100644 assets/jwplayer/glow/dock/button.png
+ create mode 100644 assets/jwplayer/glow/glow.xml
+ create mode 100644 assets/jwplayer/glow/playlist/item.png
+ create mode 100644 assets/jwplayer/glow/playlist/itemOver.png
+ create mode 100644 assets/jwplayer/glow/playlist/sliderCapBottom.png
+ create mode 100644 assets/jwplayer/glow/playlist/sliderCapTop.png
+ create mode 100644 assets/jwplayer/glow/playlist/sliderRail.png
+ create mode 100644 assets/jwplayer/glow/playlist/sliderThumb.png
+ create mode 100644 assets/jwplayer/glow/sharing/embedIcon.png
+ create mode 100644 assets/jwplayer/glow/sharing/embedScreen.png
+ create mode 100644 assets/jwplayer/glow/sharing/shareIcon.png
+ create mode 100644 assets/jwplayer/glow/sharing/shareScreen.png
+ create mode 100644 assets/jwplayer/player.swf
+ create mode 100644 atom.xml
+ create mode 100644 blog/archives/index.html
+ create mode 100644 favicon.png
+ create mode 100644 images/bird_32_gray.png
+ create mode 100644 images/bird_32_gray_fail.png
+ create mode 100644 images/code_bg.png
+ create mode 100644 images/dotted-border.png
+ create mode 100644 images/email.png
+ create mode 100644 images/line-tile.png
+ create mode 100644 images/noise.png
+ create mode 100644 images/rss.png
+ create mode 100644 images/search.png
+ rewrite index.html (100%)
+ create mode 100644 javascripts/github.js
+ create mode 100644 javascripts/libs/jXHR.js
+ create mode 100644 javascripts/libs/jquery.min.js
+ create mode 100644 javascripts/libs/swfobject-dynamic.js
+ create mode 100644 javascripts/modernizr-2.0.js
+ create mode 100644 javascripts/octopress.js
+ create mode 100644 javascripts/pinboard.js
+ create mode 100644 javascripts/twitter.js
+ create mode 100644 robots.txt
+ create mode 100644 sitemap.xml
+ create mode 100644 stylesheets/screen.css
+
+## Pushing generated _deploy website
+Enter passphrase for key '/home/trey/.ssh/id_rsa': 
+To git@github.com:harj0/harj0.github.io.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:harj0/harj0.github.io.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+## Github Pages deploy complete
+cd -~
+
+#+END_SRC
+  + Seems the tutorial forgot to tell us to commit first(?)
+- =git commit . -m 'Something, Something, Something... DARKSIDE'=
+- =rake gen_deploy=
+#+BEGIN_SRC sh
+## Generating Site with Jekyll
+identical source/stylesheets/screen.css 
+Configuration file: /home/trey/git-installs/octopress/octopress/_config.yml
+            Source: source
+       Destination: public
+      Generating... 
+                    done.
+ Auto-regeneration: disabled. Use --watch to enable.
+## Deploying branch to Github Pages 
+## Pulling any updates from Github Pages 
+cd _deploy
+Enter passphrase for key '/home/trey/.ssh/id_rsa': 
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+cd -
+rm -rf _deploy/favicon.png
+rm -rf _deploy/LICENSE
+rm -rf _deploy/blog
+rm -rf _deploy/sitemap.xml
+rm -rf _deploy/robots.txt
+rm -rf _deploy/atom.xml
+rm -rf _deploy/index.html
+rm -rf _deploy/stylesheets
+rm -rf _deploy/images
+rm -rf _deploy/assets
+rm -rf _deploy/javascripts
+
+## Copying public to _deploy
+cp -r public/. _deploy
+cd _deploy
+
+## Committing: Site updated at 2014-09-21 06:12:50 UTC
+[master 4b0d087] Site updated at 2014-09-21 06:12:50 UTC
+ 3 files changed, 3 insertions(+), 25 deletions(-)
+ delete mode 100644 LICENSE
+
+## Pushing generated _deploy website
+Enter passphrase for key '/home/trey/.ssh/id_rsa': 
+Counting objects: 94, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (84/84), done.
+Writing objects: 100% (93/93), 188.20 KiB | 0 bytes/s, done.
+Total 93 (delta 10), reused 0 (delta 0)
+To git@github.com:harj0/harj0.github.io.git
+   b3842f9..4b0d087  master -> master
+
+## Github Pages deploy complete
+cd -
+#+END_SRC 
+*HURRAY*
+- =new_post["Hello Werld']=
+/ERROR-/
+#+BEGIN_SRC sh
+zsh: no matches found: new_post[Hello Werld]
+#+END_SRC
+  + Short answer: zsh globs dont like rake; Yoshi made a quick fix:
+- =rake new_post=
+#+BEGIN_SRC sh
+(in /home/trey/git-installs/octopress/octopress)
+Enter a title for your post:
+#+END_SRC
+- =Hello Werldz=
+#+BEGIN_SRC sh
+mkdir -p source/_posts
+Creating new post: source/_posts/2014-09-21-hello-werldz.markdown
+#+END_SRC
+- Installed https://github.com/yoshinari-nomura/org-octopress (from within emacs via M-x list-packages)
+- =emacsclient -a '' -nw source/_posts/2014-09-21-hello-werldz.markdown=
+- Uh.. edited the file..with ..elite emacs mastery and awesome macros... ya.. know..
+- =rake watch=
+#+BEGIN_SRC sh
+(in /home/trey/git-installs/octopress/octopress)
+Starting to watch source with Jekyll and Compass.
+Configuration file: /home/trey/git-installs/octopress/octopress/_config.yml
+>>> Change detected at 02:10:05 to: screen.scss
+            Source: source
+       Destination: public
+      Generating... 
+                    done.
+ Auto-regeneration: enabled for 'source'
+identical public/stylesheets/screen.css 
+>>> Compass is watching for changes. Press Ctrl-C to Stop.
+      Regenerating: 1 files at 2014-09-21 02:13:30 ...done.
+#+END_SRC
+** Finished !! (?)
+That brings us here.. first *test post*
+
