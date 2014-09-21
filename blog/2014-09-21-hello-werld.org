@@ -26,7 +26,6 @@ Cloned to ~/git-installs/octopress/octopress/ . This looks bad but its just for 
 - =rake install=
 
 
-{{{more}}}
 
 ** Next Steps
 Chose to use Github Pages for testing.
@@ -261,5 +260,8 @@ identical public/stylesheets/screen.css
       Regenerating: 1 files at 2014-09-21 02:13:30 ...done.
 #+END_SRC
 ** Finished !! (?)
+
 That brings us here.. first *test post*
+{{{more}}}
+
 
