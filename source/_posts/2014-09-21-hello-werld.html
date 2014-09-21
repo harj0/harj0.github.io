@@ -1,0 +1,366 @@
+---
+title: "2014-09-21-Hello-Werld.org"
+date: 2014-09-21
+layout: post
+categories: 
+published: true
+comments: 
+---
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Octopress <span class="timestamp-wrapper"><span class="timestamp">&lt;2014-09-20 Sat&gt;</span></span></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Trying out Octopress locally.. 
+Steps taken: (following <a href="http://octopress.org/docs/setup/">http://octopress.org/docs/setup/</a> )
+</p>
+</div>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="done DONE">DONE</span> Setup Octopress (commands entered)</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Cloned to ~/git-installs/octopress/octopress/ . This looks bad but its just for testing, chill.
+</p>
+<ul class="org-ul">
+<li><code>gem install bundler</code>
+</li>
+<li><code>cd ~</code>
+</li>
+<li><code>git clone git://github.com/sstephenson/rbenv.git .rbenv</code>
+</li>
+<li><code>echo 'export PATH</code>"$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.zshenv=
+</li>
+<li><code>echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.zshenv</code>
+</li>
+<li><code>git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build</code>
+</li>
+<li><code>source ~/.zshenv</code>
+</li>
+<li><code>rbenv install 1.9.3-p0</code>
+</li>
+<li><code>rbenv local 1.9.3-p0</code>  
+</li>
+<li><code>rbenv rehash</code>  
+</li>
+<li><code>cd ~/git-installs/octopress/octopress</code>
+</li>
+<li><code>bundle install</code>
+</li>
+<li><code>rake install</code>
+</li>
+</ul>
+
+
+<p>
+<!-- more -->
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="done DONE">DONE</span> Next Steps</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Chose to use Github Pages for testing.
+Following <a href="http://octopress.org/docs/deploying/github/">http://octopress.org/docs/deploying/github/</a> :
+</p>
+
+<ul class="org-ul">
+<li>Created new repository (on Github) harj0.github.io
+</li>
+<li><code>rake setup_github_pages</code>
+</li>
+<li><code>rake generate</code>
+</li>
+</ul>
+<p>
+<i>ERROR-</i>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">Error: No JS runtime.
+</pre>
+</div>
+<ul class="org-ul">
+<li><code>sudo apt-get install nodejs</code>
+</li>
+</ul>
+<p>
+<span class="underline">Fixed.</span>
+</p>
+<ul class="org-ul">
+<li><code>rake generate</code>
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Generating Site with Jekyll</span>
+identical source/stylesheets/screen.css 
+Configuration file: /home/trey/git-installs/octopress/octopress/_config.yml
+            Source: source
+       Destination: public
+      Generating... 
+                    done.
+ Auto-regeneration: disabled. Use --watch to enable.~
+</pre>
+</div>
+<ul class="org-ul">
+<li><code>rake deploy</code>
+</li>
+</ul>
+<p>
+<i>Semi-ERROR-</i>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Deploying branch to Github Pages </span>
+<span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Pulling any updates from Github Pages </span>
+<span style="color: #bdbdb3; font-weight: bold;">cd</span> _deploy
+Warning: Permanently added the RSA host key for IP address <span style="color: #CC5542;">'192.30.252.128'</span> to the list of known hosts.
+Enter passphrase for key <span style="color: #CC5542;">'/home/trey/.ssh/id_rsa'</span>: 
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From github.com:harj0/harj0.github.io
+ * [new branch]      master     -&gt; origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) <span style="color: #7d7c61; font-weight: bold;">for</span> details
+
+    git pull &lt;remote&gt; &lt;branch&gt;
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/&lt;branch&gt; master
+
+<span style="color: #bdbdb3; font-weight: bold;">cd</span> -
+rm -rf _deploy/index.html
+
+<span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Copying public to _deploy</span>
+cp -r public/. _deploy
+<span style="color: #bdbdb3; font-weight: bold;">cd</span> _deploy
+
+<span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Committing: Site updated at 2014-09-21 02:45:27 UTC</span>
+[master 1cf6a4c] Site updated at 2014-09-21 02:45:27 UTC
+ 61 files changed, 1121 insertions(+), 1 deletion(-)
+ create mode 100644 assets/jwplayer/glow/controlbar/background.png
+ create mode 100644 assets/jwplayer/glow/controlbar/blankButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/divider.png
+ create mode 100644 assets/jwplayer/glow/controlbar/fullscreenButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/fullscreenButtonOver.png
+ create mode 100644 assets/jwplayer/glow/controlbar/muteButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/muteButtonOver.png
+ create mode 100644 assets/jwplayer/glow/controlbar/normalscreenButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/normalscreenButtonOver.png
+ create mode 100644 assets/jwplayer/glow/controlbar/pauseButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/pauseButtonOver.png
+ create mode 100644 assets/jwplayer/glow/controlbar/playButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/playButtonOver.png
+ create mode 100644 assets/jwplayer/glow/controlbar/timeSliderBuffer.png
+ create mode 100644 assets/jwplayer/glow/controlbar/timeSliderCapLeft.png
+ create mode 100644 assets/jwplayer/glow/controlbar/timeSliderCapRight.png
+ create mode 100644 assets/jwplayer/glow/controlbar/timeSliderProgress.png
+ create mode 100644 assets/jwplayer/glow/controlbar/timeSliderRail.png
+ create mode 100644 assets/jwplayer/glow/controlbar/unmuteButton.png
+ create mode 100644 assets/jwplayer/glow/controlbar/unmuteButtonOver.png
+ create mode 100644 assets/jwplayer/glow/display/background.png
+ create mode 100644 assets/jwplayer/glow/display/bufferIcon.png
+ create mode 100644 assets/jwplayer/glow/display/muteIcon.png
+ create mode 100644 assets/jwplayer/glow/display/playIcon.png
+ create mode 100644 assets/jwplayer/glow/dock/button.png
+ create mode 100644 assets/jwplayer/glow/glow.xml
+ create mode 100644 assets/jwplayer/glow/playlist/item.png
+ create mode 100644 assets/jwplayer/glow/playlist/itemOver.png
+ create mode 100644 assets/jwplayer/glow/playlist/sliderCapBottom.png
+ create mode 100644 assets/jwplayer/glow/playlist/sliderCapTop.png
+ create mode 100644 assets/jwplayer/glow/playlist/sliderRail.png
+ create mode 100644 assets/jwplayer/glow/playlist/sliderThumb.png
+ create mode 100644 assets/jwplayer/glow/sharing/embedIcon.png
+ create mode 100644 assets/jwplayer/glow/sharing/embedScreen.png
+ create mode 100644 assets/jwplayer/glow/sharing/shareIcon.png
+ create mode 100644 assets/jwplayer/glow/sharing/shareScreen.png
+ create mode 100644 assets/jwplayer/player.swf
+ create mode 100644 atom.xml
+ create mode 100644 blog/archives/index.html
+ create mode 100644 favicon.png
+ create mode 100644 images/bird_32_gray.png
+ create mode 100644 images/bird_32_gray_fail.png
+ create mode 100644 images/code_bg.png
+ create mode 100644 images/dotted-border.png
+ create mode 100644 images/email.png
+ create mode 100644 images/line-tile.png
+ create mode 100644 images/noise.png
+ create mode 100644 images/rss.png
+ create mode 100644 images/search.png
+ rewrite index.html (100%)
+ create mode 100644 javascripts/github.js
+ create mode 100644 javascripts/libs/jXHR.js
+ create mode 100644 javascripts/libs/jquery.min.js
+ create mode 100644 javascripts/libs/swfobject-dynamic.js
+ create mode 100644 javascripts/modernizr-2.0.js
+ create mode 100644 javascripts/octopress.js
+ create mode 100644 javascripts/pinboard.js
+ create mode 100644 javascripts/twitter.js
+ create mode 100644 robots.txt
+ create mode 100644 sitemap.xml
+ create mode 100644 stylesheets/screen.css
+
+<span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Pushing generated _deploy website</span>
+Enter passphrase for key <span style="color: #CC5542;">'/home/trey/.ssh/id_rsa'</span>: 
+To git@github.com:harj0/harj0.github.io.git
+ <span style="color: #7d7c61; font-weight: bold;">!</span> [rejected]        master -&gt; master (non-fast-forward)
+error: failed to push some refs to <span style="color: #CC5542;">'git@github.com:harj0/harj0.github.io.git'</span>
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: <span style="color: #CC5542;">'git pull ...'</span>) before pushing again.
+hint: See the <span style="color: #CC5542;">'Note about fast-forwards'</span><span style="color: #7d7c61; font-weight: bold;"> in</span> <span style="color: #CC5542;">'git push --help'</span> for details.
+
+<span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Github Pages deploy complete</span>
+<span style="color: #bdbdb3; font-weight: bold;">cd</span> -~
+</pre>
+</div>
+<ul class="org-ul">
+<li>Seems the tutorial forgot to tell us to commit first(?)
+</li>
+<li>=git commit . -m 'Something, Something, Something&#x2026; DARKSIDE'=
+</li>
+<li><code>rake gen_deploy</code>
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Generating Site with Jekyll</span>
+identical source/stylesheets/screen.css 
+Configuration file: /home/trey/git-installs/octopress/octopress/_config.yml
+            Source: source
+       Destination: public
+      Generating... 
+                    done.
+ Auto-regeneration: disabled. Use --watch to enable.
+<span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Deploying branch to Github Pages </span>
+<span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Pulling any updates from Github Pages </span>
+<span style="color: #bdbdb3; font-weight: bold;">cd</span> _deploy
+Enter passphrase for key <span style="color: #CC5542;">'/home/trey/.ssh/id_rsa'</span>: 
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) <span style="color: #7d7c61; font-weight: bold;">for</span> details
+
+    git pull &lt;remote&gt; &lt;branch&gt;
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/&lt;branch&gt; master
+
+<span style="color: #bdbdb3; font-weight: bold;">cd</span> -
+rm -rf _deploy/favicon.png
+rm -rf _deploy/LICENSE
+rm -rf _deploy/blog
+rm -rf _deploy/sitemap.xml
+rm -rf _deploy/robots.txt
+rm -rf _deploy/atom.xml
+rm -rf _deploy/index.html
+rm -rf _deploy/stylesheets
+rm -rf _deploy/images
+rm -rf _deploy/assets
+rm -rf _deploy/javascripts
+
+<span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Copying public to _deploy</span>
+cp -r public/. _deploy
+<span style="color: #bdbdb3; font-weight: bold;">cd</span> _deploy
+
+<span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Committing: Site updated at 2014-09-21 06:12:50 UTC</span>
+[master 4b0d087] Site updated at 2014-09-21 06:12:50 UTC
+ 3 files changed, 3 insertions(+), 25 deletions(-)
+ delete mode 100644 LICENSE
+
+<span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Pushing generated _deploy website</span>
+Enter passphrase for key <span style="color: #CC5542;">'/home/trey/.ssh/id_rsa'</span>: 
+Counting objects: 94, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (84/84), done.
+Writing objects: 100% (93/93), 188.20 KiB | 0 bytes/s, done.
+Total 93 (delta 10), reused 0 (delta 0)
+To git@github.com:harj0/harj0.github.io.git
+   b3842f9..4b0d087  master -&gt; master
+
+<span style="color: #6abd50;">## </span><span style="color: #6aaf50;">Github Pages deploy complete</span>
+<span style="color: #bdbdb3; font-weight: bold;">cd</span> -
+</pre>
+</div>
+<p>
+<b>HURRAY</b>
+</p>
+<ul class="org-ul">
+<li><code>new_post["Hello Werld']</code>
+</li>
+</ul>
+<p>
+<i>ERROR-</i>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">zsh: no matches found: new_post[Hello Werld]
+</pre>
+</div>
+<ul class="org-ul">
+<li>Short answer: zsh globs dont like rake; Yoshi made a quick fix:
+</li>
+<li><code>rake new_post</code>
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-sh">(<span style="color: #7d7c61; font-weight: bold;">in</span> /home/trey/git-installs/octopress/octopress)
+Enter a title for your post:
+</pre>
+</div>
+<ul class="org-ul">
+<li><code>Hello Werldz</code>
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-sh">mkdir -p source/_posts
+Creating new post: source/_posts/2014-09-21-hello-werldz.markdown
+</pre>
+</div>
+<ul class="org-ul">
+<li>Installed <a href="https://github.com/yoshinari-nomura/org-octopress">https://github.com/yoshinari-nomura/org-octopress</a> (from within emacs via M-x list-packages)
+</li>
+<li><code>emacsclient -a '' -nw source/_posts/2014-09-21-hello-werldz.markdown</code>
+</li>
+<li>Uh.. edited the file..with ..elite emacs mastery and awesome macros&#x2026; ya.. know..
+</li>
+<li><code>rake watch</code>
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-sh">(<span style="color: #7d7c61; font-weight: bold;">in</span> /home/trey/git-installs/octopress/octopress)
+Starting to watch source with Jekyll and Compass.
+Configuration file: /home/trey/git-installs/octopress/octopress/_config.yml
+&gt;&gt;&gt; Change detected at 02:10:05 to: screen.scss
+            Source: source
+       Destination: public
+      Generating... 
+                    done.
+ Auto-regeneration: enabled for <span style="color: #CC5542;">'source'</span>
+identical public/stylesheets/screen.css 
+&gt;&gt;&gt; Compass is watching for changes. Press Ctrl-C to Stop.
+      Regenerating: 1 files at 2014-09-21 02:13:30 ...done.
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="done DONE">DONE</span> Finished !! (?)</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+That brings us here.. first <b>test post</b>
+</p>
+</div>
+</div>
+</div>
