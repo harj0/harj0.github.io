@@ -20,8 +20,8 @@ tabs didnt work, etc.. So I'm gonna just yank the whole thing right here into or
 3. It /should/ fix all the formating
 
 ** (How do links look?)
-- http://harj0.github.io/blog/2014-09-22-testing-org-mode-features.html
--
+ http://harj0.github.io/blog/2014-09-22-testing-org-mode-features.html
+
 #+BEGIN_HTML
 /2014-09-22-testing-org-mode-features.html
 #+END_HTML
