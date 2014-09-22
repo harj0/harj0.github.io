@@ -11,6 +11,14 @@
   </url>
   
   <url>
+    <loc>http://harj0.github.io/blog/2014-09-22-Yanked.html</loc>
+    
+    <lastmod>2014-09-22T12:11:05-05:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://harj0.github.io/blog/2014-09-22-testing-org-mode-features.html</loc>
     
     <lastmod>2014-09-22T11:18:32-05:00</lastmod>
@@ -45,14 +53,14 @@
   
   <url>
     <loc>http://harj0.github.io/blog/archives/</loc>
-    <lastmod>2014-09-22T14:01:26-05:00</lastmod>
+    <lastmod>2014-09-22T14:10:30-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://harj0.github.io/</loc>
-    <lastmod>2014-09-22T14:01:26-05:00</lastmod>
+    <lastmod>2014-09-22T14:10:30-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
