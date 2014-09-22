@@ -4,7 +4,7 @@
   <title><![CDATA[harj0's Octopress Blog =TEST=]]></title>
   <link href="http://harj0.github.io/atom.xml" rel="self"/>
   <link href="http://harj0.github.io/"/>
-  <updated>2014-09-21T13:19:02-05:00</updated>
+  <updated>2014-09-22T11:57:01-05:00</updated>
   <id>http://harj0.github.io/</id>
   <author>
     <name><![CDATA[Harj0]]></name>
@@ -12,6 +12,101 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Testing Org-mode Features]]></title>
+    <link href="http://harj0.github.io/blog/2014-09-22-testing-org-mode-features.html"/>
+    <updated>2014-09-22T11:18:32-05:00</updated>
+    <id>http://harj0.github.io/blog/testing-org-mode-features</id>
+    <content type="html"><![CDATA[<ul>
+<li><p>Let&rsquo;s test out some basic org &hellip; stuff.</p>
+
+<p>I&rsquo;m not using org-octopress for this post, havent took the time to look through the code and figure
+out exactly what that mode is <em>doing</em>. So this post is just sort of a test to see how default orgmode
+is going to render. I find myself constantly doing these types of redundant tests, it may seem silly
+but it helps me to learn and understand new things, so &hellip; /chill/.</p></li>
+</ul>
+
+
+<p>** (Re)Review</p>
+
+<p>   We&rsquo;ve already seen some basics but that was using org-octopress.el, so we might as well go through
+it all again&hellip; Watch none of this work and this whole post just comes out as garbage&hellip;.</p>
+
+<p><em>Some bold text</em>
+/Some italisized text/
+<em>Some underlined text</em>
++Some strikethough text+
+=Some code text=
+~Some verbatim text~     - Same thing??</p>
+
+<ul>
+<li>Ok, now just a table and maybe a couple misc objects</li>
+</ul>
+
+
+<p>** Make a table out of a random ls&rsquo;s output.
+   Blah..</p>
+
+<pre><code> |-------------+---------+-------------+------------|          
+ |         107 | Sep  14 |       06:40 | New.org~   |
+ |        9393 | Sep  14 |       09:01 | New.html~  |
+ |        8711 | Sep  14 |       09:08 | New.html   |
+ |         984 | Sep  14 |       09:08 | New.org    |
+ |          89 | Sep  14 |       10:50 | Todo.org~  |
+ |       11288 | Sep  14 |       11:13 | Todo.html~ |
+ |       16897 | Sep  14 |       12:10 | Todo.html  |
+ |        1954 | Sep  14 |       12:10 | Todo.org   |
+ |         117 | Sep  15 |       00:06 | index.org~ |
+ |-------------+---------+-------------+------------|
+ | 49540 Bytes | Stuff   | 19:07 Hours | 9 Files    |
+</code></pre>
+
+<p>** This will probably be ugly and possibly kill the whole thing..
+   Wiiiide table
+  |&mdash;&mdash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;|
+  | Edit | [[file:~/.emacs::(require%20&#8217;command-log-mode)][.emacs]]                       | [[file:~/Org]]          | [[file:~/.emacs.d]]    | [[file:~/.emacs.d/themes]] | [[file:~/.emacs.d/Vendor]] |
+  | Sys  | file:~/.zshrc                | file:~/.bashrc      | file:~/.zprofile   | file:~/.profile        | file:~/.xinitrc        |
+  | Org  | file:~/Org/FrequentFiles.org | file:~/Org/Todo.org | file:~/Org/New.org | file:~/Org/Notes.org   | file:~/Org/Blog.org    |
+  |&mdash;&mdash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;|</p>
+
+<p>Hmm, I wonder what a time stamp will look like.. <2014-09-22 Mon>
+Now maybe and &ldquo;inactive&rdquo; time stamp..  [2014-09-22 Mon]
+Also, TODO&rsquo;s:
+* TODO Apparently you HAVE to start all Headlines at the <em>first</em> column, Like WTF?
+- [ ] Sucky
+- [ ] Shity
+- [X] Sorry
+- [ ] Slobering
+- [ ] Soviets</p>
+
+<ul>
+<li><p>TODO : Kill all Seven Shity Slobering Sucky Sorry Slow-ass Soviets.</p></li>
+<li><p>Oh.. I dunno..</p></li>
+</ul>
+
+
+<p><strong> A little list with org links
+   Hmmm&hellip;
+</strong>* Frequently Edited Files</p>
+
+<ul>
+<li>[[file:~/.emacs]]</li>
+<li>[[file:~/.i3/config]]</li>
+<li>[[file:~/.zshrc::plugins%3D(github%20colored-man%20emacs)][zshrc]]</li>
+<li>[[file:~/.zprofile]]</li>
+<li>[[file:~/i3.conkyrc::TEXT][i3.conkyrc]]</li>
+<li>[[file:~/.bashrc::alias%20Running%3D&#8217;echo%20Seeing%20if%20@1%20is%20rUnNninG&hellip;%20&amp;%20ps%20-A%20|%20grep&#8217;][bashrc]]</li>
+<li><p>[[file:Todo.org::*My%20app%20in%20PC%20SCHEDULED:%20&lt;2014-11-06%20Thu%2009:15>][FrequentFiles.org]]</p></li>
+<li><p>Ok, that was so much fun</p>
+
+<p>Let&rsquo;s see if it was all just a waste of time and we just created a big dump of garbage..</p></li>
+</ul>
+
+
+<p>-EOP-</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[2014-09-21-Hello-Werld.org]]></title>
