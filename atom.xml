@@ -4,7 +4,7 @@
   <title><![CDATA[harj0's Octopress Blog =TEST=]]></title>
   <link href="http://harj0.github.io/atom.xml" rel="self"/>
   <link href="http://harj0.github.io/"/>
-  <updated>2014-09-22T14:10:30-05:00</updated>
+  <updated>2014-09-22T14:12:32-05:00</updated>
   <id>http://harj0.github.io/</id>
   <author>
     <name><![CDATA[Harj0]]></name>
@@ -159,17 +159,7 @@ Also, TODO&rsquo;s:
     <link href="http://harj0.github.io/blog/2014-09-22-Yanked.html"/>
     <updated>2014-09-22T12:11:05-05:00</updated>
     <id>http://harj0.github.io/blog/Yanked</id>
-    <content type="html"><![CDATA[<h1>+TITLE: Yanked</h1>
-
-<h1>+DATE: 2014-09-22</h1>
-
-<h1>+SETUPFILE: ~/Org/Octo-setup.org</h1>
-
-<h1>+JEKYLL_LAYOUT: post</h1>
-
-<h1>+JEKYLL_CATEGORIES: org-octopress</h1>
-
-<h1>+JEKYLL_PUBLISHED: true</h1>
+    <content type="html"><![CDATA[<p>Markdown Copy&hellip;.</p>
 
 <ul>
 <li><p>Org-mode didn&rsquo;t get the job done.</p>
