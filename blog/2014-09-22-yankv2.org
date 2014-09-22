@@ -1,14 +1,17 @@
-#+TITLE: Yanked
+#+TITLE: Yankv2
 #+DATE: 2014-09-22
 #+SETUPFILE: ~/Org/Octo-setup.org
 #+JEKYLL_LAYOUT: post
-#+JEKYLL_CATEGORIES: org-octopress 
+#+JEKYLL_CATEGORIES: 
 #+JEKYLL_PUBLISHED: true
 
-* Org-mode didn&#8217;t get the job done.
+v2 ... Made new post /within/ org-octopress ... 
+Come on baby...
+
+* Org-mode didn't get the job done.
 
   Ok, that was a pretty big failure in our last post. The formatting seemed to be completely off,
-tabs didnt work, etc.. So I&#8217;m gonna just yank the whole thing right here into org-octopress.
+tabs didnt work, etc.. So I'm gonna just yank the whole thing right here into org-octopress.
 
 1. What will happen???
 2. What do we expect to work???
@@ -76,8 +79,8 @@ _Some underlined text_
 
 
 Hmm, I wonder what a time stamp will look like.. <2014-09-22 Mon>
-Now maybe and &#8220;inactive&#8221; time stamp..  [2014-09-22 Mon]
-Also, TODO&#8217;s:
+Now maybe and "inactive" time stamp..  [2014-09-22 Mon]
+Also, TODO's:
 * TODO Apparently you HAVE to start all Headlines at the *first* column, Like WTF?
 - [ ] Sucky
 - [ ] Shity
@@ -91,7 +94,7 @@ Also, TODO&#8217;s:
 * Oh.. I dunno..
 
 ** A little list with org links
-   Hmmm&#8230;
+   Hmmm...
 *** Frequently Edited Files
 
 - [[file:~/.emacs]]
@@ -99,17 +102,19 @@ Also, TODO&#8217;s:
 - [[file:~/.zshrc::plugins%3D(github%20colored-man%20emacs)][zshrc]]
 - [[file:~/.zprofile]]
 - [[file:~/i3.conkyrc::TEXT][i3.conkyrc]]
-- [[file:~/.bashrc::alias%20Running%3D&#8217;echo%20Seeing%20if%20@1%20is%20rUnNninG&#8230;%20&%20ps%20-A%20|%20grep&#8217;][bashrc]]
+- [[file:~/.bashrc::alias%20Running%3D'echo%20Seeing%20if%20@1%20is%20rUnNninG...%20&%20ps%20-A%20|%20grep'][bashrc]]
 - [[file:Todo.org::*My%20app%20in%20PC%20SCHEDULED:%20<2014-11-06%20Thu%2009:15>][FrequentFiles.org]]
 
 
 * Ok, that was so much fun
 
-  Let&#8217;s see if it was all just a waste of time and we just created a big dump of garbage..
+  Let's see if it was all just a waste of time and we just created a big dump of garbage..
 
 -EOP-
 
 *YAAANNNKKK* >
 
 
-}
+{{{more}}}
+
+
